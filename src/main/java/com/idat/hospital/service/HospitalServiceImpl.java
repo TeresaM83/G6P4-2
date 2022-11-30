@@ -45,19 +45,19 @@ public class HospitalServiceImpl implements HospitalService {
 	}
 
 	@Override
-	public void registrar(HospitalDTO alumnoDto) {
+	public void registrar(HospitalDTO hospitalDTO) {
 		Hospital hospital = new Hospital();
-		hospital.setNombre(alumnoDto.getNombreDto());
-		hospital.setDireccion(alumnoDto.getDireccionDto());
+		hospital.setNombre(hospitalDTO.getNombreDto());
+		hospital.setDireccion(hospitalDTO.getDireccionDto());
 		repository.save(hospital);
 	}
 
 	@Override
-	public void actualizar(HospitalDTO alumnoDto) {
+	public void actualizar(HospitalDTO hospitalDTO) {
 		Hospital hospital = new Hospital();
-		hospital.setIdHospital(alumnoDto.getIdDto());
-		hospital.setNombre(alumnoDto.getNombreDto());
-		hospital.setDireccion(alumnoDto.getDireccionDto());
+		hospital.setIdHospital(hospitalDTO.getIdDto());
+		hospital.setNombre(hospitalDTO.getNombreDto());
+		hospital.setDireccion(hospitalDTO.getDireccionDto());
 		repository.saveAndFlush(hospital);
 	}
 
